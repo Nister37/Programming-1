@@ -1,6 +1,6 @@
-import w8.A810.*;
+import miniprojectSale.*;
 
-public class Ex10 {
+public class Ex09 {
     public static void main(String[] args) {
         Product[] products = {
                 new Product(100, "Towel", 12.5, 25),
@@ -12,13 +12,11 @@ public class Ex10 {
 
         Sale sale = new Sale();
 
-        sale.add(new SalesLine(products[0], 1));
+        sale.add(new SalesLine(products[0], 2));
         sale.add(new SalesLine(products[1], 1));
         sale.add(new SalesLine(products[2], 1));
-        sale.add(new SalesLine(products[3], 3));
-        sale.add(new SalesLine(products[0], 1));
+        sale.add(new SalesLine(products[3], 5));
         sale.add(new SalesLine(products[4], 2));
-        sale.add(new SalesLine(products[3], 2));
 
         System.out.println("\n---SALE TOSTRING---\n");
         System.out.print(sale);

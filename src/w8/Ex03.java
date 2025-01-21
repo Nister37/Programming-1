@@ -1,5 +1,6 @@
 import A803.*;
 
+public class Ex03{
 public static void main(String[] args) {
     Animals animals = new Animals();
 
@@ -15,4 +16,4 @@ public static void main(String[] args) {
     System.out.println(named);
     System.out.println(flying);
     System.out.println(eggLaying);
-}
+}}

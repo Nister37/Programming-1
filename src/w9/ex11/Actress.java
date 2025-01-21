@@ -1,6 +1,6 @@
 package ex11;
 
-public class Actress {
+public class Actress implements Comparable<Actress>{
     private String name;
     private int birthYear;
 
@@ -30,5 +30,18 @@ public class Actress {
         return String.format("%s (%d)", getName(), getBirthYear());
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        return name.equals(((Actress) obj).name);
+    }
 
+    @Override
+    public int hashCode() { return name.hashCode(); }
+
+    public int compareTo(Actress other) {
+        int compareYear = getBirthYear() - other.getBirthYear();
+        return compareYear != 0 ? compareYear : getName().compareTo(other.getName());
+    }
 }
